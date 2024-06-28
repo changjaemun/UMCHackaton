@@ -26,6 +26,7 @@ struct TabBarView: View {
                         Image(systemName: "cart")
                         Text("장바구니")
                     }
+                    .badge(1)
                 MyPageView()
                     .tabItem {
                         Image(systemName: "person.fill")
@@ -33,6 +34,7 @@ struct TabBarView: View {
                     }
                 
             }
+            .accentColor(Color.green)
         }
     }
 }

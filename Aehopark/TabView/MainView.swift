@@ -36,10 +36,16 @@ struct MainView: View {
                 //사진 - 4개
                 HStack {
                     NavigationLink(destination: ProductDetail()) {
-                        Image("lemon")
-                            .resizable()
-                            .frame(width: 170, height: 170)
-                            .cornerRadius(10)
+                        ZStack{
+                            Image("lemon")
+                                .resizable()
+                                .frame(width: 170, height: 170)
+                                .cornerRadius(10)
+//                            Text("레몬\n최저가로 사러가기")
+//                                .font(.title3)
+//                                .tint(Color.black)
+//                                .bold()
+                        }
                     }
                     NavigationLink(destination: ProductDetail()) {
                         Image("melon")
