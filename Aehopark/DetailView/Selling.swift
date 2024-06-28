@@ -28,9 +28,11 @@ struct Selling: View {
                                 Rectangle()
                                     .frame(width: 120,height: 120)
                                     .foregroundStyle(Color.gray)
+                                    .opacity(0.3)
                                     .cornerRadius(10)
                                 Image(systemName: "camera")
                                     .resizable()
+                                    .tint(Color.green)
                                     .frame(width: 100,height: 100)
                                     .padding()
                             }
@@ -132,7 +134,7 @@ struct Selling: View {
                         .font(.headline)
                         .padding()
                         .frame(width: UIScreen.main.bounds.width * 0.9)
-                        .background(Color.blue)
+                        .background(Color.green)
                         .cornerRadius(25)
                 }
             }
@@ -159,7 +161,7 @@ struct CategoryButton: View {
                     .foregroundColor(.white)
                     .padding()
                     .frame(minWidth: 80)
-                    .background(selectedCategory == title ? Color.blue : Color.gray)
+                    .background(selectedCategory == title ? Color.green : Color.gray)
                     .cornerRadius(8)
             }
             .buttonStyle(PlainButtonStyle())

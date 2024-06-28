@@ -44,7 +44,7 @@ struct Buying: View {
                                     .font(.headline)
                                     .padding()
                                     .frame(width: UIScreen.main.bounds.width * 0.9)
-                                    .background(Color.blue)
+                                    .background(Color.green)
                                     .cornerRadius(25)
                             }
             }
