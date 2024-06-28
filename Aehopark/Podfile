@@ -8,4 +8,9 @@ target 'Aehopark' do
 pod 'Alamofire'
   # Pods for Aehopark
 
+# Add Kakao SDK
+  pod 'KakaoSDKCommon'
+  pod 'KakaoSDKAuth'
+  pod 'KakaoSDKUser'
+
 end
