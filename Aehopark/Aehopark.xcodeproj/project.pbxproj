@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		743C9FC52C2F319D0088483F /* CertificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743C9FC42C2F319D0088483F /* CertificationView.swift */; };
 		748D35B22C2EDE6B00E7BF91 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748D35B12C2EDE6B00E7BF91 /* TabBarView.swift */; };
 		748D35B42C2EDF6200E7BF91 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748D35B32C2EDF6200E7BF91 /* MainView.swift */; };
 		748D35B62C2EDF6B00E7BF91 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748D35B52C2EDF6B00E7BF91 /* CartView.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		2681C281824CA35888818CF0 /* Pods-Aehopark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aehopark.debug.xcconfig"; path = "Target Support Files/Pods-Aehopark/Pods-Aehopark.debug.xcconfig"; sourceTree = "<group>"; };
+		743C9FC42C2F319D0088483F /* CertificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationView.swift; sourceTree = "<group>"; };
 		748D35B12C2EDE6B00E7BF91 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		748D35B32C2EDF6200E7BF91 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		748D35B52C2EDF6B00E7BF91 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				748D35B12C2EDE6B00E7BF91 /* TabBarView.swift */,
 				748D35B52C2EDF6B00E7BF91 /* CartView.swift */,
 				748D35B32C2EDF6200E7BF91 /* MainView.swift */,
+				743C9FC42C2F319D0088483F /* CertificationView.swift */,
 				748D35B72C2EDF7600E7BF91 /* MyPageView.swift */,
 			);
 			path = TabView;
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				748D35B62C2EDF6B00E7BF91 /* CartView.swift in Sources */,
+				743C9FC52C2F319D0088483F /* CertificationView.swift in Sources */,
 				A16133182C2EDF7E004C342F /* AppDelegate.swift in Sources */,
 				748D35B42C2EDF6200E7BF91 /* MainView.swift in Sources */,
 				A17B0B352C2EC59B00FA4B1E /* Buying.swift in Sources */,
