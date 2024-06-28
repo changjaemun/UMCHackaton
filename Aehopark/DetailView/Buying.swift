@@ -9,6 +9,8 @@ import SwiftUI
 
 struct Buying: View {
     @State private var isChecked = false
+    @State private var isBuying = false
+    
     var body: some View {
         NavigationStack{
             VStack(spacing:0){
@@ -34,7 +36,7 @@ struct Buying: View {
                     }
                 }
                 Button(action: {
-                                // 구매하기 버튼 클릭 시 수행할 작업
+                    isBuying.toggle()
                                 print("구매하기 버튼 클릭됨")
                             }) {
                                 Text("확인")
@@ -48,6 +50,14 @@ struct Buying: View {
             }
             }.navigationTitle("배송지 및 결제수단")
                 .navigationBarTitleDisplayMode(.inline)
+                .alert(isPresented: $isBuying) {
+                                    Alert(
+                                        title: Text("구매 완료"),
+                                        message: Text("구매가 성공적으로 완료되었습니다."),
+                                        dismissButton: .default(Text("완료"))
+                                    )
+                                }
+                
         }
         
     }

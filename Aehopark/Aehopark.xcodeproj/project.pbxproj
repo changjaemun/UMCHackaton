@@ -14,6 +14,7 @@
 		748D35BB2C2EDFB700E7BF91 /* KategorieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748D35BA2C2EDFB700E7BF91 /* KategorieView.swift */; };
 		A15ADAB22C2F06A300C62043 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15ADAB12C2F06A300C62043 /* Style.swift */; };
 		A15ADAB42C2F06CE00C62043 /* LabeledStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15ADAB32C2F06CE00C62043 /* LabeledStepper.swift */; };
+		A15ADAB62C2F2ADE00C62043 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15ADAB52C2F2ADE00C62043 /* ImagePicker.swift */; };
 		A16133182C2EDF7E004C342F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16133172C2EDF7E004C342F /* AppDelegate.swift */; };
 		A17B0B192C2EBE2300FA4B1E /* AehoparkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B0B182C2EBE2300FA4B1E /* AehoparkApp.swift */; };
 		A17B0B1B2C2EBE2300FA4B1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B0B1A2C2EBE2300FA4B1E /* ContentView.swift */; };
@@ -36,6 +37,7 @@
 		8774853D271756922D921853 /* Pods_Aehopark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aehopark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A15ADAB12C2F06A300C62043 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		A15ADAB32C2F06CE00C62043 /* LabeledStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledStepper.swift; sourceTree = "<group>"; };
+		A15ADAB52C2F2ADE00C62043 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		A16133172C2EDF7E004C342F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A17B0B152C2EBE2300FA4B1E /* Aehopark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aehopark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17B0B182C2EBE2300FA4B1E /* AehoparkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AehoparkApp.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				A17B0B2E2C2EC56900FA4B1E /* ProductDetail.swift */,
 				A17B0B302C2EC57A00FA4B1E /* Selling.swift */,
+				A15ADAB52C2F2ADE00C62043 /* ImagePicker.swift */,
 				A17B0B322C2EC58700FA4B1E /* Login.swift */,
 				A17B0B342C2EC59B00FA4B1E /* Buying.swift */,
 			);
@@ -273,6 +276,7 @@
 				A15ADAB22C2F06A300C62043 /* Style.swift in Sources */,
 				748D35B22C2EDE6B00E7BF91 /* TabBarView.swift in Sources */,
 				A17B0B1B2C2EBE2300FA4B1E /* ContentView.swift in Sources */,
+				A15ADAB62C2F2ADE00C62043 /* ImagePicker.swift in Sources */,
 				748D35B82C2EDF7600E7BF91 /* MyPageView.swift in Sources */,
 				A17B0B2F2C2EC56900FA4B1E /* ProductDetail.swift in Sources */,
 				A17B0B332C2EC58700FA4B1E /* Login.swift in Sources */,
@@ -416,6 +420,7 @@
 				DEVELOPMENT_TEAM = 8FKM9FB4PH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "갤접";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -447,6 +452,7 @@
 				DEVELOPMENT_TEAM = 8FKM9FB4PH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "갤접";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

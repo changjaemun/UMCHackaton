@@ -31,10 +31,12 @@ struct MyPageView: View {
                     Text("상품판매 등록하기")
                     Text("배송지 및 결제 관리")
                     Text("로그아웃")
+                        
+                    }
                 }
             }
         }
-    }
+    
 }
 
 #Preview {

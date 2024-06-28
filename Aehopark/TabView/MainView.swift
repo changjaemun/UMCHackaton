@@ -57,12 +57,22 @@ struct MainView: View {
                             .frame(width: 170, height: 170)
                             .cornerRadius(10)
                     }
-                    NavigationLink(destination: ProductDetail()) {
-                        Image("bellPepper")
-                            .resizable()
-                            .frame(width: 170, height: 170)
-                            .cornerRadius(10)
+                    ZStack{
+                        NavigationLink(destination: ProductDetail()) {
+                            Image("bellPepper")
+                                .resizable()
+                                .frame(width: 170, height: 170)
+                                .cornerRadius(10)
+                        }
+                        NavigationLink(destination: Selling(productName: "")) {
+                            Image(systemName: "plus")
+                                .resizable()
+                                .frame(width: 70, height: 70)
+                                .background(Color.gray)
+                                .cornerRadius(40)
+                        }
                     }
+                    
                 }
                 
             }

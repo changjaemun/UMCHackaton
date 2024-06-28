@@ -9,29 +9,30 @@ import SwiftUI
 
 struct TabBarView: View {
     var body: some View {
-        
-        TabView {
-            MainView()
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("메인")
-                }
-            KategorieView()
-                .tabItem {
-                    Image(systemName: "books.vertical.fill")
-                    Text("카테고리")
-                }
-            CartView()
-                .tabItem {
-                    Image(systemName: "cart")
-                    Text("장바구니")
-                }
-            MyPageView()
-                .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("마이페이지")
-                }
-            
+        NavigationStack{
+            TabView {
+                MainView()
+                    .tabItem {
+                        Image(systemName: "house.fill")
+                        Text("메인")
+                    }
+                KategorieView()
+                    .tabItem {
+                        Image(systemName: "books.vertical.fill")
+                        Text("카테고리")
+                    }
+                CartView()
+                    .tabItem {
+                        Image(systemName: "cart")
+                        Text("장바구니")
+                    }
+                MyPageView()
+                    .tabItem {
+                        Image(systemName: "person.fill")
+                        Text("마이페이지")
+                    }
+                
+            }
         }
     }
 }

@@ -10,6 +10,7 @@ import KakaoSDKCommon
 import KakaoSDKAuth
 import KakaoSDKUser
 import Alamofire
+
 //import Combine
 
 class AppState: ObservableObject {
@@ -19,7 +20,7 @@ class AppState: ObservableObject {
 struct ContentView: View {
     @EnvironmentObject var appState: AppState
         var body: some View {
-           Login()
+           TabBarView()
         }
 }
 

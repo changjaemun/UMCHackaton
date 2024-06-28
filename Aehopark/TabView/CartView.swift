@@ -11,45 +11,59 @@ struct CartView: View {
     @State private var value: Int = 1
     
     var body: some View {
-        VStack {
-            Text("장바구니")
-            List {
-                CartListView(productImage: "lemon", productName: "아따달다 최고당도 방울토마토", productPrice: 10000 * value, value: $value)
-            }
+        NavigationStack{
             VStack {
-                HStack {
-                    Text("상품 합계")
-                    Spacer()
-                    Text("\(10000 * value)원")
+                Text("장바구니")
+                List {
+                    CartListView(productImage: "lemon", productName: "아따달다 최고당도 방울토마토", productPrice: 10000 * value, value: $value)
+                        .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                            Button{
+                                
+                            }label: {
+                                Label("Edit", systemImage: "pencil")
+                            }
+                            .tint(.red)
+                        }
+                    
                 }
-                HStack {
-                    Text("수수료")
-                    Spacer()
-                    Text("3 %")
-                }
-                HStack {
-                    Rectangle()
-                        .frame(width: .infinity, height: 1)
-                }
-                HStack {
-                    Text("합계")
-                    Spacer()
-                    Text("\(Int(Double(10000 * value) * 1.03))원")
-                        .font(.headline)
-                }
-                HStack {
-                    Button("주문하기") {
-                        
+                VStack {
+                    HStack {
+                        Text("상품 합계")
+                        Spacer()
+                        Text("\(10000 * value)원")
                     }
-                    .frame(width: 350, height: 40)
-                    .foregroundColor(.white)
-                    .background(
-                        RoundedRectangle(cornerRadius: 20)
-                            .foregroundColor( Color.green)
-                    )
+                    HStack {
+                        Text("수수료")
+                        Spacer()
+                        Text("3 %")
+                    }
+                    HStack {
+                        Rectangle()
+                            .frame(width: .infinity, height: 1)
+                    }
+                    HStack {
+                        Text("합계")
+                        Spacer()
+                        Text("\(Int(Double(10000 * value) * 1.03))원")
+                            .font(.headline)
+                    }
+                    NavigationLink(destination: Buying()) {
+                        HStack {
+                            Button("주문하기") {
+                                
+                            }
+                            .frame(width: 350, height: 40)
+                            .foregroundColor(.white)
+                            .background(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .foregroundColor( Color.green)
+                            )
+                        }
+                    }
+                    
                 }
+                .padding()
             }
-            .padding()
         }
     }
 }
