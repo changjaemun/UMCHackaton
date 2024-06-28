@@ -16,7 +16,7 @@ struct TabBarView: View {
                     Image(systemName: "house.fill")
                     Text("메인")
                 }
-            SearchField()
+            KategorieView()
                 .tabItem {
                     Image(systemName: "books.vertical.fill")
                     Text("카테고리")

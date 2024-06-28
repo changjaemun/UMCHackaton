@@ -14,7 +14,7 @@ struct MainView: View {
             //검색
             VStack {
                 
-                NavigationLink(destination: SearchField()) {
+                NavigationLink(destination: KategorieView()) {
                     TextField("검색", text: .constant(""))
                         .padding(10)
                         .background(Color(.systemGray6))
