@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A16133182C2EDF7E004C342F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16133172C2EDF7E004C342F /* AppDelegate.swift */; };
 		A17B0B192C2EBE2300FA4B1E /* AehoparkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B0B182C2EBE2300FA4B1E /* AehoparkApp.swift */; };
 		A17B0B1B2C2EBE2300FA4B1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B0B1A2C2EBE2300FA4B1E /* ContentView.swift */; };
 		A17B0B1D2C2EBE2400FA4B1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A17B0B1C2C2EBE2400FA4B1E /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		2681C281824CA35888818CF0 /* Pods-Aehopark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aehopark.debug.xcconfig"; path = "Target Support Files/Pods-Aehopark/Pods-Aehopark.debug.xcconfig"; sourceTree = "<group>"; };
 		8774853D271756922D921853 /* Pods_Aehopark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aehopark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A16133172C2EDF7E004C342F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A17B0B152C2EBE2300FA4B1E /* Aehopark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aehopark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17B0B182C2EBE2300FA4B1E /* AehoparkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AehoparkApp.swift; sourceTree = "<group>"; };
 		A17B0B1A2C2EBE2300FA4B1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				A17B0B182C2EBE2300FA4B1E /* AehoparkApp.swift */,
+				A16133172C2EDF7E004C342F /* AppDelegate.swift */,
 				A17B0B1A2C2EBE2300FA4B1E /* ContentView.swift */,
 				A17B0B1C2C2EBE2400FA4B1E /* Assets.xcassets */,
 				A17B0B1E2C2EBE2400FA4B1E /* Preview Content */,
@@ -228,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A16133182C2EDF7E004C342F /* AppDelegate.swift in Sources */,
 				A17B0B2D2C2EC51000FA4B1E /* SearchField.swift in Sources */,
 				A17B0B352C2EC59B00FA4B1E /* Buying.swift in Sources */,
 				A17B0B1B2C2EBE2300FA4B1E /* ContentView.swift in Sources */,

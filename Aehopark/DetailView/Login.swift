@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import KakaoSDKAuth
+import KakaoSDKUser
+import Alamofire
 
 struct Login: View {
     
@@ -31,9 +34,8 @@ struct Login: View {
             
             Spacer()
             
-            socialLoginButton(action: nil, backgroundColor: Color.yellow, logoImageName: "kakaologinlogo", buttonText: "카카오로 로그인")
+            socialLoginButton(action: kakaoLoginFunc().kakaoLogin, backgroundColor: Color.yellow, logoImageName: "kakaologinlogo", buttonText: "카카오로 로그인")
             
-            socialLoginButton(action: nil, backgroundColor: Color.green, logoImageName: "naverloginlogo", buttonText: "네이버로 로그인")
             
             Spacer()
             
@@ -45,14 +47,14 @@ struct Login: View {
 
 
 struct socialLoginButton:View{
-    var action: (() -> Void)?
+    var action: (() -> Void)
     var backgroundColor: Color
     var logoImageName: String
     var buttonText: String
     
     var body: some View{
         Button(action: {
-//                        action()
+                        action()
                     }) {
                         HStack {
                             Image(logoImageName) // 네이버 로고 이미지
@@ -72,3 +74,63 @@ struct socialLoginButton:View{
 #Preview {
     Login()
 }
+
+
+struct kakaoLoginFunc {
+    
+    func kakaoLogin() {
+        if UserApi.isKakaoTalkLoginAvailable() {
+            UserApi.shared.loginWithKakaoTalk { (oauthToken, error) in
+                if let error = error {
+                    print("Error logging in with KakaoTalk: \(error)")
+                } else {
+                    print("Successfully logged in with KakaoTalk")
+                    self.getUserInfo(oauthToken: oauthToken)
+                }
+            }
+        } else {
+            UserApi.shared.loginWithKakaoAccount { (oauthToken, error) in
+                if let error = error {
+                    print("Error logging in with KakaoAccount: \(error)")
+                } else {
+                    print("Successfully logged in with KakaoAccount")
+                    self.getUserInfo(oauthToken: oauthToken)
+                }
+            }
+        }
+    }
+    
+    func getUserInfo(oauthToken: OAuthToken?) {
+        UserApi.shared.me { (user, error) in
+            if let error = error {
+                print("Error fetching user info: \(error)")
+            } else {
+                if let user = user {
+                    print("User ID: \(user.id ?? 0)")
+                    print("User nickname: \(user.kakaoAccount?.profile?.nickname ?? "")")
+                    print("User email: \(user.kakaoAccount?.email ?? "")")
+                    // Send user info to your server
+                    self.sendUserInfoToServer(user: user)
+                }
+            }
+        }
+    }
+    
+    func sendUserInfoToServer(user: User) {
+        let parameters: [String: Any] = [
+            "id": user.id ?? 0,
+            "nickname": user.kakaoAccount?.profile?.nickname ?? "",
+            "email": user.kakaoAccount?.email ?? ""
+        ]
+
+        AF.request("http://localhost:8080", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                print("Successfully sent user info to server: \(value)")
+            case .failure(let error):
+                print("Error sending user info to server: \(error)")
+            }
+        }
+    }
+}
+

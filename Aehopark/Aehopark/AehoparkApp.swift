@@ -8,7 +8,10 @@
 import SwiftUI
 
 @main
-struct AehoparkApp: App {
+struct Aehopark: App {
+    // Register AppDelegate
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     var body: some Scene {
         WindowGroup {
             ContentView()
