@@ -1,17 +1,12 @@
-//
-//  KategorieView.swift
-//  Aehopark
-//
-//  Created by 윤성 on 6/28/24.
-//
-
 import SwiftUI
 
 struct KategorieView: View {
+    let models: [ProductModel] = dummyData().dummyProducts
+    @State private var selectedCategory: String?
+    
     var body: some View {
-        NavigationView{
-            ScrollView{
-                
+        NavigationView {
+            ScrollView {
                 VStack {
                     Text("카테고리")
                         .font(.title2)
@@ -25,7 +20,7 @@ struct KategorieView: View {
                     
                     HStack {
                         Button(action: {
-                            // 정렬 함수
+                            selectedCategory = "야채류"
                         }) {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 10)
@@ -45,7 +40,7 @@ struct KategorieView: View {
                         }
                         
                         Button(action: {
-                            // 정렬 함수
+                            selectedCategory = "곡물류"
                         }) {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 10)
@@ -65,7 +60,7 @@ struct KategorieView: View {
                         }
                         
                         Button(action: {
-                            // 정렬 함수
+                            selectedCategory = "과일류"
                         }) {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 10)
@@ -87,99 +82,54 @@ struct KategorieView: View {
                     .padding(.top, 20)
                     .tint(Color.white)
                     .padding()
-                    HStack {
-                        Spacer()
-                        Text("  상품")
-                            .font(.title3)
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                            Text("더보기")
-                        })
-                        Spacer()
-                    }
-                    VStack{
-                        HStack{
-                            NavigationLink(destination: ProductDetail(), label: {
-                                VStack{
-                                    Image("lemon")
-                                        .resizable()
-                                        .frame(width: 150, height: 150)
-                                    Text("과일류")
-                                        .tint(Color.black)
-                                        .font(.subheadline)
-                                    Text("레몬")
-                                        .tint(Color.black)
-                                        .font(.title3)
-                                    Text("최저가 보러가기")
-                                        .tint(Color.gray)
-                                        .font(.subheadline)
-                                }
+                    
+                    if let selectedCategory = selectedCategory {
+                        HStack {
+                            Spacer()
+                            Text("  \(selectedCategory)")
+                                .font(.title3)
+                            Spacer()
+                            Spacer()
+                            Spacer()
+                            Spacer()
+                            Spacer()
+                            Spacer()
+                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                                Text("더보기")
                             })
-                            
-                            NavigationLink(destination: ProductDetail(), label: {
-                                VStack{
-                                    Image("lemon")
-                                        .resizable()
-                                        .frame(width: 150, height: 150)
-                                    Text("과일류")
-                                        .tint(Color.black)
-                                        .font(.subheadline)
-                                    Text("레몬")
-                                        .tint(Color.black)
-                                        .font(.title3)
-                                    Text("최저가 보러가기")
-                                        .tint(Color.gray)
-                                        .font(.subheadline)
-                                }
-                            })
+                            Spacer()
                         }
-                    }
-                    HStack{
-                        NavigationLink(destination: ProductDetail(), label: {
-                            VStack{
-                                Image("lemon")
-                                    .resizable()
-                                    .frame(width: 150, height: 150)
-                                Text("과일류")
-                                    .tint(Color.black)
-                                    .font(.subheadline)
-                                Text("레몬")
-                                    .tint(Color.black)
-                                    .font(.title3)
-                                Text("최저가 보러가기")
-                                    .tint(Color.gray)
-                                    .font(.subheadline)
+                        
+                        VStack {
+                            ForEach(filteredProducts(by: selectedCategory), id: \.self) { product in
+                                NavigationLink(destination: ProductDetail(model: product)) {
+                                    VStack {
+                                        Image(product.image)
+                                            .resizable()
+                                            .frame(width: 150, height: 150)
+                                        Text(product.category)
+                                            .tint(Color.black)
+                                            .font(.subheadline)
+                                        Text(product.name)
+                                            .tint(Color.black)
+                                            .font(.title3)
+                                        Text("최저가 보러가기")
+                                            .tint(Color.gray)
+                                            .font(.subheadline)
+                                    }
+                                }
                             }
-                        })
-                        NavigationLink(destination: ProductDetail(), label: {
-                            VStack{
-                                Image("lemon")
-                                    .resizable()
-                                    .frame(width: 150, height: 150)
-                                Text("과일류")
-                                    .tint(Color.black)
-                                    .font(.subheadline)
-                                Text("레몬")
-                                    .tint(Color.black)
-                                    .font(.title3)
-                                Text("최저가 보러가기")
-                                    .tint(Color.gray)
-                                    .font(.subheadline)
-                            }
-                        })
+                        }
                     }
                 }
             }
         }
     }
-        
+    
+    func filteredProducts(by category: String) -> [ProductModel] {
+        return models.filter { $0.category == category }
+    }
 }
-
 
 #Preview {
     KategorieView()

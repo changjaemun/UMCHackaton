@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProductDetail: View {
+    let model:ProductModel
+    @State var cartModel:[ProductModel] = []
     
     var body: some View {
         NavigationStack{
@@ -15,7 +17,7 @@ struct ProductDetail: View {
                 VStack{
                     TabView {
                                ForEach(0..<2) { index in
-                                   Image("login")
+                                   Image(model.image)
                                        .resizable()
                                        .scaledToFit()
                                        .tag(index)
@@ -25,16 +27,19 @@ struct ProductDetail: View {
                     ScrollView(.horizontal){
                         HStack{
                             ForEach(0..<2) { index in
-                                Image("login")
-                                    .resizable()
-                                    .scaledToFit()
+                                VStack{
+                                    Text("\(index)일 전 가격")
+                                    Text(model.ProductDetail.priceChange[index])
+                                }
+                                
+                                    
                             }
                         }
                     }.frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.1)
                     Divider()
                     VStack(alignment: .leading){
                         Text("가격 추세")
-                        Image("chart")
+                        Image(model.ProductDetail.graphImage)
                             .resizable()
                             .scaledToFit()
                             .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.3)
@@ -52,9 +57,11 @@ struct ProductDetail: View {
                     ForEach(0..<2) { index in
                         HStack{
                             Text("쿠팡")
-                            Text("20,000원")
+                            Text(model.price)
                             Spacer()
-                            Button(action: {}, label: {
+                            Button(action: {
+                                cartModel.append(model)
+                            }, label: {
                                 Text("장바구니 추가")
                             })
                         }.padding()
@@ -62,7 +69,7 @@ struct ProductDetail: View {
                     
                     Spacer()
                     
-                }.navigationTitle("방울토마토")
+                }.navigationTitle(model.name)
             }
            
         }
@@ -71,5 +78,5 @@ struct ProductDetail: View {
 }
 
 #Preview {
-    ProductDetail()
+    ProductDetail(model: dummyData().dummyProducts[0], cartModel: [dummyData().dummyProducts[0]])
 }

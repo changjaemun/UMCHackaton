@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TabBarView: View {
+    @Binding var cartModel:[ProductModel]
     var body: some View {
         NavigationStack{
             TabView {
@@ -21,7 +22,7 @@ struct TabBarView: View {
                         Image(systemName: "books.vertical.fill")
                         Text("카테고리")
                     }
-                CartView()
+                CartView(cartModel: $cartModel)
                     .tabItem {
                         Image(systemName: "cart")
                         Text("장바구니")
@@ -39,6 +40,3 @@ struct TabBarView: View {
     }
 }
 
-#Preview {
-    TabBarView()
-}

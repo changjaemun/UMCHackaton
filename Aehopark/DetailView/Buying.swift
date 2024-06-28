@@ -70,10 +70,10 @@ struct AddressList:View{
             Spacer()
             HStack{
                 Text("ㅇㅇㅇ")
-                Text("010-4444-4444")
+                Text("010-4444-4434")
             }
             HStack{
-                Text("경상남도 창원시 마산한ㅍㅁㄴㅇ")
+                Text("경상남도 진주시 진주대로 500번길")
             }
             HStack{
                 Spacer()

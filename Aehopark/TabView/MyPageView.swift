@@ -10,7 +10,7 @@ import SwiftUI
 struct MyPageView: View {
     var body: some View {
         let name: String = "oo"
-        let mypagelist:[String] = ["서비스 소개", "서비스 이용약관","개인정보 처리방침","마케팅, 광고성 정보 알림 수신 동의","판매자 인증하기","상품판매 등록하기","배송지 및 결제 관리","로그아웃"]
+        let mypagelist:[String] = ["서비스 소개", "서비스 이용약관","개인정보 처리방침","마케팅, 광고성 정보 알림 수신 동의","판매자 인증하기","상품판매 등록하기","배송지 및 결제 관리","로그인"]
         NavigationView {
             VStack {
                 HStack {
@@ -24,9 +24,16 @@ struct MyPageView: View {
                 
                 List {
                     ForEach(mypagelist, id: \.self){ i in
-                        NavigationLink(destination: Login()) {
-                            Text(i)
+                        if (mypagelist.firstIndex(of: i) == mypagelist.count - 1){
+                            NavigationLink(destination: Login()) {
+                                Text(i)
+                            }
+                        }else{
+                            NavigationLink(destination: MypageDetail()) {
+                                Text(i)
+                            }
                         }
+                        
                     }
                     }
                 }

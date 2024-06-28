@@ -18,12 +18,14 @@ class AppState: ObservableObject {
 }
 
 struct ContentView: View {
+    @Binding var cartModel:[ProductModel]
     @EnvironmentObject var appState: AppState
         var body: some View {
-           TabBarView()
+            TabBarView(cartModel: $cartModel)
         }
 }
 
-#Preview {
-    ContentView()
-}
+
+//#Preview {
+//    ContentView(cartModel: .constant(ProductModel))
+//}

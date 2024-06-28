@@ -9,21 +9,24 @@ import SwiftUI
 
 struct CartView: View {
     @State private var value: Int = 1
-    
+    @Binding var cartModel:[ProductModel]
     var body: some View {
         NavigationStack{
             VStack {
                 Text("장바구니")
                 List {
-                    CartListView(productImage: "lemon", productName: "아따달다 최고당도 방울토마토", productPrice: 10000 * value, value: $value)
-                        .swipeActions(edge: .trailing, allowsFullSwipe: false) {
-                            Button{
-                                
-                            }label: {
-                                Label("Edit", systemImage: "pencil")
+                    ForEach(cartModel, id: \.self){i in
+                        CartListView(productImage: i.image, productName: i.name, productPrice: Int(i.price) ?? 0 * value, value: $value)
+                            .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                                Button{
+                                    
+                                }label: {
+                                    Label("Edit", systemImage: "pencil")
+                                }
+                                .tint(.red)
                             }
-                            .tint(.red)
-                        }
+                    }
+                    
                     
                 }
                 VStack {
@@ -100,7 +103,7 @@ struct CartListView: View {
         }
     }
 }
-
-#Preview {
-    CartView()
-}
+//
+//#Preview {
+//    CartView(cartModel: [dummyData().dummyProducts[0]])
+//}

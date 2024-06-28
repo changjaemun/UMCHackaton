@@ -16,6 +16,8 @@
 		A15ADAB22C2F06A300C62043 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15ADAB12C2F06A300C62043 /* Style.swift */; };
 		A15ADAB42C2F06CE00C62043 /* LabeledStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15ADAB32C2F06CE00C62043 /* LabeledStepper.swift */; };
 		A15ADAB62C2F2ADE00C62043 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15ADAB52C2F2ADE00C62043 /* ImagePicker.swift */; };
+		A15ADAB82C2F43DF00C62043 /* MypageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15ADAB72C2F43DF00C62043 /* MypageDetail.swift */; };
+		A15ADABB2C2F444F00C62043 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15ADABA2C2F444F00C62043 /* ProductModel.swift */; };
 		A16133182C2EDF7E004C342F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16133172C2EDF7E004C342F /* AppDelegate.swift */; };
 		A17B0B192C2EBE2300FA4B1E /* AehoparkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B0B182C2EBE2300FA4B1E /* AehoparkApp.swift */; };
 		A17B0B1B2C2EBE2300FA4B1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B0B1A2C2EBE2300FA4B1E /* ContentView.swift */; };
@@ -40,6 +42,8 @@
 		A15ADAB12C2F06A300C62043 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		A15ADAB32C2F06CE00C62043 /* LabeledStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledStepper.swift; sourceTree = "<group>"; };
 		A15ADAB52C2F2ADE00C62043 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		A15ADAB72C2F43DF00C62043 /* MypageDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageDetail.swift; sourceTree = "<group>"; };
+		A15ADABA2C2F444F00C62043 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		A16133172C2EDF7E004C342F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A17B0B152C2EBE2300FA4B1E /* Aehopark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aehopark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17B0B182C2EBE2300FA4B1E /* AehoparkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AehoparkApp.swift; sourceTree = "<group>"; };
@@ -104,11 +108,20 @@
 			path = CustomStepper;
 			sourceTree = "<group>";
 		};
+		A15ADAB92C2F443800C62043 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				A15ADABA2C2F444F00C62043 /* ProductModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		A17B0B0C2C2EBE2300FA4B1E = {
 			isa = PBXGroup;
 			children = (
 				A15ADAB02C2F069300C62043 /* CustomStepper */,
 				748D35B92C2EDF7F00E7BF91 /* TabView */,
+				A15ADAB92C2F443800C62043 /* DataModel */,
 				A17B0B2B2C2EC47000FA4B1E /* DetailView */,
 				A17B0B172C2EBE2300FA4B1E /* Aehopark */,
 				A17B0B162C2EBE2300FA4B1E /* Products */,
@@ -153,6 +166,7 @@
 				A15ADAB52C2F2ADE00C62043 /* ImagePicker.swift */,
 				A17B0B322C2EC58700FA4B1E /* Login.swift */,
 				A17B0B342C2EC59B00FA4B1E /* Buying.swift */,
+				A15ADAB72C2F43DF00C62043 /* MypageDetail.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -276,6 +290,7 @@
 				A16133182C2EDF7E004C342F /* AppDelegate.swift in Sources */,
 				748D35B42C2EDF6200E7BF91 /* MainView.swift in Sources */,
 				A17B0B352C2EC59B00FA4B1E /* Buying.swift in Sources */,
+				A15ADAB82C2F43DF00C62043 /* MypageDetail.swift in Sources */,
 				748D35BB2C2EDFB700E7BF91 /* KategorieView.swift in Sources */,
 				A15ADAB22C2F06A300C62043 /* Style.swift in Sources */,
 				748D35B22C2EDE6B00E7BF91 /* TabBarView.swift in Sources */,
@@ -283,6 +298,7 @@
 				A15ADAB62C2F2ADE00C62043 /* ImagePicker.swift in Sources */,
 				748D35B82C2EDF7600E7BF91 /* MyPageView.swift in Sources */,
 				A17B0B2F2C2EC56900FA4B1E /* ProductDetail.swift in Sources */,
+				A15ADABB2C2F444F00C62043 /* ProductModel.swift in Sources */,
 				A17B0B332C2EC58700FA4B1E /* Login.swift in Sources */,
 				A17B0B312C2EC57A00FA4B1E /* Selling.swift in Sources */,
 				A17B0B192C2EBE2300FA4B1E /* AehoparkApp.swift in Sources */,
