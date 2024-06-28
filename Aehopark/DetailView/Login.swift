@@ -57,15 +57,11 @@ struct socialLoginButton:View{
                         action()
                     }) {
                         HStack {
-                            Image(logoImageName) // 네이버 로고 이미지
+                            Image("kakaoLogin") // 네이버 로고 이미지
                                 .resizable()
-                                .frame(width: 24, height: 24)
-                            Text(buttonText)
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
+                                .scaledToFit()
                         }
                         .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.08)
-                        .background(backgroundColor)
                         .cornerRadius(25)
                     }
     }
@@ -122,7 +118,7 @@ struct kakaoLoginFunc {
             "nickname": user.kakaoAccount?.profile?.nickname ?? "",
             "email": user.kakaoAccount?.email ?? ""
         ]
-
+        
         AF.request("http://localhost:8080", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
             switch response.result {
             case .success(let value):

@@ -10,11 +10,17 @@ import KakaoSDKCommon
 import KakaoSDKAuth
 import KakaoSDKUser
 import Alamofire
+//import Combine
+
+class AppState: ObservableObject {
+    @Published var isLoggedIn: Bool = false
+}
 
 struct ContentView: View {
-    var body: some View {
-        Login()
-    }
+    @EnvironmentObject var appState: AppState
+        var body: some View {
+           Login()
+        }
 }
 
 #Preview {
