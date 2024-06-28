@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74AA67E02C2EBF7F008C9D01 /* yun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AA67DF2C2EBF7F008C9D01 /* yun.swift */; };
 		A17B0B192C2EBE2300FA4B1E /* AehoparkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B0B182C2EBE2300FA4B1E /* AehoparkApp.swift */; };
 		A17B0B1B2C2EBE2300FA4B1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B0B1A2C2EBE2300FA4B1E /* ContentView.swift */; };
 		A17B0B1D2C2EBE2400FA4B1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A17B0B1C2C2EBE2400FA4B1E /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74AA67DF2C2EBF7F008C9D01 /* yun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yun.swift; sourceTree = "<group>"; };
 		A17B0B152C2EBE2300FA4B1E /* Aehopark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aehopark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17B0B182C2EBE2300FA4B1E /* AehoparkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AehoparkApp.swift; sourceTree = "<group>"; };
 		A17B0B1A2C2EBE2300FA4B1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				A17B0B182C2EBE2300FA4B1E /* AehoparkApp.swift */,
 				A17B0B1A2C2EBE2300FA4B1E /* ContentView.swift */,
+				74AA67DF2C2EBF7F008C9D01 /* yun.swift */,
 				A17B0B1C2C2EBE2400FA4B1E /* Assets.xcassets */,
 				A17B0B1E2C2EBE2400FA4B1E /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74AA67E02C2EBF7F008C9D01 /* yun.swift in Sources */,
 				A17B0B1B2C2EBE2300FA4B1E /* ContentView.swift in Sources */,
 				A17B0B192C2EBE2300FA4B1E /* AehoparkApp.swift in Sources */,
 			);
@@ -280,6 +284,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +314,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
